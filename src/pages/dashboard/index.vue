@@ -1,5 +1,5 @@
 <template>
-	<div class="Body">
+	<div>
 		<transition name="fade" mode="out-in">
 			<div v-if="items.length == 0" key="loading">
 				Loading...
@@ -13,6 +13,12 @@
 				/>
 			</div>
 		</transition>
+
+		<h2>{{ countItems }}</h2>
+		{{ clothing }}
+		<button class="btn btn-success" @click="changeColorinCloth">
+			Change clothing
+		</button>
 		<div
 			v-for="(itemSelected, index) in selectedItems"
 			:key="'selected' + index + itemSelected.name"
@@ -22,27 +28,52 @@
 			<b>Size:</b> {{ itemSelected.size }} <br />
 			<hr />
 		</div>
+
+		<CustomComponent />
 	</div>
 </template>
 
 <script>
-import apiData from "../api-data";
-import Item from "../components/Item";
-import busData from "../busData";
+import apiData from "@/api-data";
+import Item from "@/components/dashboard/Item";
+import CustomComponent from "@/components/general/CustomComponent";
+import busData from "@/busData";
 
 export default {
 	components: {
 		Item,
+		CustomComponent,
 	},
 	data() {
 		return {
 			items: [],
 			selectedItems: [],
+			countItems: -1,
+			clothing: {
+				color: "",
+			},
 		};
+	},
+	watch: {
+		selectedItems: {
+			immediate: true,
+			handler: function() {
+				this.countItems = this.selectedItems.length;
+			},
+		},
+		clothing: {
+			deep: true,
+			handler: function() {
+				alert("Clothing changed");
+			},
+		},
 	},
 	methods: {
 		AddToCart(item) {
 			this.selectedItems.push(item);
+		},
+		changeColorinCloth() {
+			this.clothing.color = "red";
 		},
 	},
 	created() {
@@ -61,12 +92,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.Body {
-	min-height: 90vh;
-	background-color: white;
-	.Items {
-		display: flex;
-	}
-}
-</style>
+<style></style>

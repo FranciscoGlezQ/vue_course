@@ -1,5 +1,8 @@
 <template>
-	<footer class="Footer">
+	<footer class="Footer bg-light">
+		<router-link :to="{ path: '/foo' }">Go to Foo</router-link> |
+		<router-link to="/bar">Go to Bar</router-link>
+
 		Footer
 	</footer>
 </template>

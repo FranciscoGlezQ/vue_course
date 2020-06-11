@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import busData from "../busData";
+import busData from "@/busData";
 export default {
 	props: {
 		item: {
