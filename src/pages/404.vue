@@ -24,6 +24,9 @@ export default {
 			});
 		},
 	},
+	mounted() {
+		console.log(this.$root.$data);
+	},
 };
 </script>
 
