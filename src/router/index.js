@@ -9,6 +9,7 @@ import Bar from "@/pages/Bar";
 import BarChildren from "@/pages/Bar/BarChildren";
 import NotFound from "@/pages/404";
 import StoreExample from "@/pages/StoreExample";
+import SlotPage from "@/pages/SlotPage";
 
 const routes = [
 	{
@@ -34,9 +35,14 @@ const routes = [
 		component: Dashboard,
 	},
 	{
-		path: "",
+		path: "/store",
 		name: "store example",
 		component: StoreExample,
+	},
+	{
+		path: "",
+		name: "slot example",
+		component: SlotPage,
 	},
 	{
 		path: "*",

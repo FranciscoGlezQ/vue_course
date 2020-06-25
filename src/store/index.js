@@ -2,26 +2,24 @@ import Vuex from "vuex";
 import Vue from "vue";
 Vue.use(Vuex);
 
+import users from "./modules/users";
+import cities from "./modules/cities";
+
 export default new Vuex.Store({
 	state: {
 		count: 0,
+		numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9],
 		name: null,
-		user: {
-			name: "",
-			payments: [
-				{
-					qtty: 0,
-					date: null,
-				},
-			],
-		},
 	},
 	getters: {
 		counterNumber: function(state) {
 			return state.count;
 		},
 		name: (state) => state.name,
-		user: (state) => state.user,
+		getNumbers: (state) =>
+			function(value) {
+				return state.numbers.filter((n) => n % value === 0);
+			},
 	},
 	mutations: {
 		increment(state, value) {
@@ -29,33 +27,14 @@ export default new Vuex.Store({
 
 			state.count++;
 		},
-		changeName(state, value) {
-			state.name = value;
-		},
-		setUser(state, value) {
-			state.user = value;
-		},
 	},
 	actions: {
 		incrementCounter({ commit, state }, value) {
 			commit("increment", value);
 		},
-		callServer: ({ commit }) => {
-			return new Promise((resolve, reject) => {
-				setTimeout(() => {
-					console.log("Server finished");
-					commit("changeName", "Hello from server");
-					const user = {
-						name: "User name",
-						payments: [
-							{ qtty: 100, date: new Date() },
-							{ qtty: 100, date: new Date() },
-						],
-					};
-					commit("setUser", user);
-					resolve();
-				}, 3000);
-			});
-		},
+	},
+	modules: {
+		users,
+		cities,
 	},
 });
