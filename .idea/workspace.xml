@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5becce0-bd95-45fa-b303-491f0dd5fa62" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/general/MyModal.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/vuelidate/MyForm.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Vuelidate/MyForm.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Vuelidate/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/general/Body.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/general/Body.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/SlotPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SlotPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +24,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1dBwwPjpaL3jr9ITHXbd8sKca3F" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -24,7 +36,32 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="serve" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="serve" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.serve" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -37,6 +74,10 @@
       <option name="presentableId" value="Default" />
       <updated>1591912032011</updated>
       <workItem from="1591912034615" duration="157000" />
+      <workItem from="1593464118399" duration="786000" />
+      <workItem from="1593466857546" duration="1445000" />
+      <workItem from="1593640104299" duration="4777000" />
+      <workItem from="1593645240834" duration="128000" />
     </task>
     <servers />
   </component>
@@ -44,6 +85,22 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
+    <state width="1314" height="169" key="GridCell.Tab.0.bottom" timestamp="1593466198196">
+      <screen x="1440" y="23" width="1366" height="745" />
+    </state>
+    <state width="1314" height="169" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.1366.745@1440.23.1366.745" timestamp="1593466198196" />
+    <state width="1314" height="169" key="GridCell.Tab.0.center" timestamp="1593466198195">
+      <screen x="1440" y="23" width="1366" height="745" />
+    </state>
+    <state width="1314" height="169" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.1366.745@1440.23.1366.745" timestamp="1593466198195" />
+    <state width="1314" height="169" key="GridCell.Tab.0.left" timestamp="1593466198194">
+      <screen x="1440" y="23" width="1366" height="745" />
+    </state>
+    <state width="1314" height="169" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.1366.745@1440.23.1366.745" timestamp="1593466198194" />
+    <state width="1314" height="169" key="GridCell.Tab.0.right" timestamp="1593466198195">
+      <screen x="1440" y="23" width="1366" height="745" />
+    </state>
+    <state width="1314" height="169" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.1366.745@1440.23.1366.745" timestamp="1593466198195" />
     <state x="137" y="87" key="MergeDialog" timestamp="1591912060778">
       <screen x="0" y="23" width="1366" height="745" />
     </state>
@@ -52,5 +109,13 @@
       <screen x="0" y="23" width="1366" height="745" />
     </state>
     <state x="228" y="102" key="MultipleFileMergeDialog/1366.23.1440.877/0.23.1366.745@0.23.1366.745" timestamp="1591912060821" />
+    <state x="1760" y="88" width="726" height="614" key="find.popup" timestamp="1593465655159">
+      <screen x="1440" y="23" width="1366" height="745" />
+    </state>
+    <state x="1760" y="88" width="726" height="614" key="find.popup/0.23.1440.877/1440.23.1366.745@1440.23.1366.745" timestamp="1593465655159" />
+    <state x="1703" y="23" width="840" height="743" key="search.everywhere.popup" timestamp="1593642234821">
+      <screen x="1440" y="23" width="1366" height="745" />
+    </state>
+    <state x="1703" y="23" width="840" height="743" key="search.everywhere.popup/0.23.1440.877/1440.23.1366.745@1440.23.1366.745" timestamp="1593642234821" />
   </component>
 </project>

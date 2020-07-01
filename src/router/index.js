@@ -10,6 +10,8 @@ import BarChildren from "@/pages/Bar/BarChildren";
 import NotFound from "@/pages/404";
 import StoreExample from "@/pages/StoreExample";
 import SlotPage from "@/pages/SlotPage";
+import Vuelidate from "@/pages/Vuelidate";
+
 
 const routes = [
 	{
@@ -40,9 +42,14 @@ const routes = [
 		component: StoreExample,
 	},
 	{
-		path: "",
+		path: "/slot-example",
 		name: "slot example",
 		component: SlotPage,
+	},
+	{
+		path: "",
+		name: "vuelidate example",
+		component: Vuelidate,
 	},
 	{
 		path: "*",
