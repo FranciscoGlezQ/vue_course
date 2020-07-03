@@ -22,8 +22,11 @@
                 <template v-if="!$v.form.email.required">
                     Este campo es requerido
                 </template>
-                <template v-else>
+                <template v-else-if="!$v.form.email.email">
                     Email invalido
+                </template>
+                <template v-else>
+                    Email no disponible
                 </template>
             </b-form-invalid-feedback>
             <b-form-valid-feedback>
@@ -31,11 +34,29 @@
             </b-form-valid-feedback>
         </b-form-group>
         <b-form-group label="Password">
-            <b-form-input v-model="form.password" placeholder="Password" type="password"
+            <b-form-input v-model="form.password" placeholder="Password" type="text"
                           @change="$v.form.password.$touch()"
                           :state="validate('password')"></b-form-input>
             <b-form-invalid-feedback>
                 Este campo es requerido
+            </b-form-invalid-feedback>
+            <b-form-valid-feedback>
+                Password correcto
+            </b-form-valid-feedback>
+        </b-form-group>
+
+        <b-form-group label="Password">
+            <b-form-input v-model="form.corfirmPassword" placeholder="Password" type="text"
+                          @change="$v.form.corfirmPassword.$touch()"
+                          :state="validate('corfirmPassword')"></b-form-input>
+            <b-form-invalid-feedback>
+
+                <template v-if="!$v.form.corfirmPassword.required">
+                    Este campo es requerido
+                </template>
+                <template v-else>
+                    Las contraseñas no coinciden
+                </template>
             </b-form-invalid-feedback>
             <b-form-valid-feedback>
                 Password correcto
@@ -49,49 +70,92 @@
     </b-form>
 </template>
 <script>
-    import {email, minLength, required} from "vuelidate/lib/validators";
+
+    import {email, required, minLength} from "vuelidate/lib/validators";
 
     export default {
         name: 'MyForm',
-        data(){
+        data() {
             return {
+                isLoading: 'Test data',
                 form: {
                     name: '',
                     email: '',
-                    password: ''
+                    password: '',
+                    corfirmPassword: ''
                 }
             }
         },
         validations: {
             form: {
                 name: {required},
-                email: {required, email},
+                email: {
+                    required,
+                    email,
+                    emailAvailable: checkEmailAvailable
+                },
                 password: {
                     required,
-                    minLength: minLength(4),
+                    minLength: minLength(4)
+                },
+                corfirmPassword: {
+                    required,
+                    sameAs: function (value) {
+                        return this.form.password === value;
+                    }
                 }
             }
         },
-        methods:{
+        methods: {
             validate(value) {
-                const {  $error, $dirty }  = this.$v.form[value];
+                const {$error, $dirty} = this.$v.form[value];
                 return $dirty ? !$error : null;
             },
             submitForm() {
                 this.$v.$touch();
-                if(this.$v.$anyError) {
+                if (this.$v.$anyError) {
                     return console.error("Formulario invalido")
                 }
 
                 this.$emit("submit", this.form)
             },
-            CreateUser(){
+            CreateUser() {
                 this.$v.$touch();
-                if(this.$v.$anyError){
+                if (this.$v.$anyError) {
                     return console.error("Formulario invalido")
                 }
                 console.log("Sending to server")
             }
+        },
+        mounted() {
+            console.log("Mounted myform")
+
         }
+    }
+
+    function checkEmailAvailable(value) {
+
+        return new Promise((resolve, reject) => {
+            if(email(value)){
+                console.log(this)
+                this.$axios.post("/checkEmail", {email: value})
+                    .then(ans => {
+                        if(ans.status === 200 && ans.data){
+                            resolve(ans.data.available);
+                        }
+                        else {
+                            resolve(false);
+                        }
+                    })
+                    .catch(error => {
+                        console.error(error);
+                        resolve(false);
+                    })
+            }
+            else {
+                resolve(false)
+            }
+
+        })
     }
 </script>

@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5becce0-bd95-45fa-b303-491f0dd5fa62" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/general/MyModal.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/vuelidate/MyForm.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Vuelidate/MyForm.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Vuelidate/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/axios/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/general/Body.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/general/Body.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/SlotPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SlotPage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Vuelidate/MyForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Vuelidate/MyForm.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +29,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -77,7 +74,8 @@
       <workItem from="1593464118399" duration="786000" />
       <workItem from="1593466857546" duration="1445000" />
       <workItem from="1593640104299" duration="4777000" />
-      <workItem from="1593645240834" duration="128000" />
+      <workItem from="1593645240834" duration="357000" />
+      <workItem from="1593728224485" duration="3077000" />
     </task>
     <servers />
   </component>
@@ -113,9 +111,9 @@
       <screen x="1440" y="23" width="1366" height="745" />
     </state>
     <state x="1760" y="88" width="726" height="614" key="find.popup/0.23.1440.877/1440.23.1366.745@1440.23.1366.745" timestamp="1593465655159" />
-    <state x="1703" y="23" width="840" height="743" key="search.everywhere.popup" timestamp="1593642234821">
+    <state x="1703" y="23" width="840" height="743" key="search.everywhere.popup" timestamp="1593729864326">
       <screen x="1440" y="23" width="1366" height="745" />
     </state>
-    <state x="1703" y="23" width="840" height="743" key="search.everywhere.popup/0.23.1440.877/1440.23.1366.745@1440.23.1366.745" timestamp="1593642234821" />
+    <state x="1703" y="23" width="840" height="743" key="search.everywhere.popup/0.23.1440.877/1440.23.1366.745@1440.23.1366.745" timestamp="1593729864326" />
   </component>
 </project>
