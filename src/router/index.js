@@ -4,7 +4,6 @@ import VueRouter from "vue-router";
 Vue.use(VueRouter);
 
 import Dashboard from "@/pages/dashboard";
-import Foo from "@/pages/Foo";
 import Bar from "@/pages/Bar";
 import BarChildren from "@/pages/Bar/BarChildren";
 import NotFound from "@/pages/404";
@@ -12,12 +11,11 @@ import StoreExample from "@/pages/StoreExample";
 import SlotPage from "@/pages/SlotPage";
 import Vuelidate from "@/pages/Vuelidate";
 
-
 const routes = [
 	{
 		path: "/foo",
 		name: "Foo",
-		component: Foo,
+		component: () => import(/* webpackChunkName: "Foo"*/ "@/pages/Foo"),
 		children: [{ path: "bar", component: Bar }],
 	},
 	{
@@ -47,9 +45,15 @@ const routes = [
 		component: SlotPage,
 	},
 	{
-		path: "",
+		path: "/vuelidate",
 		name: "vuelidate example",
 		component: Vuelidate,
+	},
+	{
+		path: "",
+		name: "cypress example",
+		component: () =>
+			import(/* webpackChunkName: "cypress-example"*/ "@/pages/Cypress"),
 	},
 	{
 		path: "*",

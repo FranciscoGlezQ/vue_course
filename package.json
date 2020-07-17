@@ -1,28 +1,33 @@
 {
-  "name": "my-project",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
-  },
-  "dependencies": {
-    "axios": "^0.19.2",
-    "bootstrap": "^4.5.0",
-    "bootstrap-vue": "^2.15.0",
-    "core-js": "^3.6.5",
-    "jquery": "^3.5.1",
-    "popper.js": "^1.16.1",
-    "vue": "^2.6.11",
-    "vue-router": "^3.3.2",
-    "vuelidate": "^0.7.5",
-    "vuex": "^3.4.0"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.4.0",
-    "@vue/cli-service": "~4.4.0",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.11"
-  }
+	"name": "my-project",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"serve": "vue-cli-service serve",
+		"build": "vue-cli-service build",
+		"test": "node_modules/.bin/cypress open",
+		"test-video": "node_modules/.bin/cypress run",
+		"start-prod": "npm run build && node ./serve-prod/index.js"
+	},
+	"dependencies": {
+		"axios": "^0.19.2",
+		"bootstrap": "^4.5.0",
+		"bootstrap-vue": "^2.15.0",
+		"core-js": "^3.6.5",
+		"http": "0.0.1-security",
+		"jquery": "^3.5.1",
+		"popper.js": "^1.16.1",
+		"vue": "^2.6.11",
+		"vue-router": "^3.3.2",
+		"vuelidate": "^0.7.5",
+		"vuex": "^3.4.0"
+	},
+	"devDependencies": {
+		"@vue/cli-plugin-babel": "~4.4.0",
+		"@vue/cli-service": "~4.4.0",
+		"cypress": "^4.9.0",
+		"node-sass": "^4.12.0",
+		"sass-loader": "^8.0.2",
+		"vue-template-compiler": "^2.6.11"
+	}
 }
